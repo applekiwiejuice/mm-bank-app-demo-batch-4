@@ -1,4 +1,3 @@
-//jshint esversion:6
 require("dotenv").config();
 
 const express = require("express");
@@ -71,7 +70,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID_G,
       clientSecret: process.env.CLIENT_SECRET_G,
-      callbackURL: "http://localhost:3000/auth/google/user",
+      callbackURL: "https://mm-bank-app.herokuapp.com/auth/google/user",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (accessToken, refreshToken, profile, cb) {
@@ -99,7 +98,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID_FB,
       clientSecret: process.env.CLIENT_SECRET_FB,
-      callbackURL: "http://localhost:3000/auth/facebook/user",
+      callbackURL: "https://mm-bank-app.herokuapp.com/auth/facebook/user",
       enableProof: true,
       profileFields: [
         "id",
@@ -367,5 +366,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, () => {
-  console.log("Server started!");
+  console.log("Server started! on " + port);
 });
