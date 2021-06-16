@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron text-center">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Admin Dashboard</h1>
+
+    <div class="row">
+      <%allUsers.forEach((user) => {%>
+      <div class="col-md-4">
+        <div class="card mt-3">
+          <i class="fas fa-user fa-4x mt-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Name: <%=user.fullName%></h5>
+            <p class="lead">Email: <%=user.username%></p>
+            <h5 class="card-title">Balance: $<%=user.balance%></h5>
+            <a class="btn btn-light m-1" href="/deposit/<%=user.id%>" role="button">Deposit</a>
+            <a class="btn btn-light m-1" href="/withdraw/<%=user.id%>" role="button">Withdraw</a>
+            <a class="btn btn-light m-1" href="/send/<%=user.id%>" role="button">Send</a>
+            <a class="btn btn-light m-1" href="/edit/<%=user.id%>" role="button">Edit</a>
+            <a class="btn btn-light m-1" href="/delete/<%=user.id%>" role="button">Delete</a>
+          </div>
+        </div>
+      </div>
+      <%});%>
+    </div>
+    <hr>
+    <a class="btn btn-light btn-lg mt-2" href="/logout" role="button">Log Out</a>
+  </div>
+</div>
+<%- include('partials/footer') %>

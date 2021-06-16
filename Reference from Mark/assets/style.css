@@ -1,0 +1,168 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background-image: url("/assets//images/BankAppWallpaper.png");
+}
+
+#container {
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    height: 50vh;
+    width: 30vw;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+
+#login-text, #signup-text {
+    margin-top: 2.3rem;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#login-container {
+    width: 90%;
+    height: 60rem;
+    margin: auto;
+}
+
+#username-input,
+#password-input,
+#email-input,
+#name-input,
+#password-confirmation-input {
+    border-style: none;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 3rem;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+}
+
+#login-button,
+#signup-button {
+    border-style: none;
+    display: block;
+    margin: 8rem auto 0;
+    height: 4rem;
+    width: 70%;
+    background-color: rgb(9, 158, 9);
+    border-style: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+#signup-button {
+    margin: 4rem auto 0;
+}
+
+#register-text, #register-link {
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#register-text {
+    text-align: center;
+    color:rgb(2, 11, 49);
+}
+
+#register-link {
+    color:white;
+    display: inline;
+}
+
+#register-link:hover {
+    cursor: pointer;
+}
+
+#dashboard-container {
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    height: 80vh;
+    width: 80vw;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+
+#image-container {
+    height: 30%;
+    width: 100%;
+}
+
+#user-image {
+    margin: 3rem 5rem 0;
+    height: 50%;
+    border-radius: 25%;
+}
+
+#user-name, #user-balance {
+    margin-left: 5;
+    margin-bottom: 5rem;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 3rem;
+}
+
+#user-balance {
+    margin-left: 70rem;
+    margin-bottom: 30rem;
+}
+
+#deposit-button,
+#withdraw-button,
+#send-button,
+#add-expense-button,
+#list-button {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    margin-left: 5rem;
+}
+
+#send-button {
+    width: 14.7rem;
+}
+
+#expense-container {
+    height: 60%;
+    width: 100%;
+}
+
+#add-expense-button {
+    margin-top: 5rem;
+}
+
+table {
+    width: 30%;
+    margin-top: -15rem;
+    margin-left: 100rem;
+}
+
+#item-name {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+#delete-button {
+    font-size: 1.5rem;
+    padding: 0.5rem 2.5rem;
+    margin-left: 4rem;
+}

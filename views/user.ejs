@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <i class="fas fa-user fa-6x"></i>
+    <h1 class="display-3"><%=fullname%> Dashboard</h1>
+    <p class="lead"><%=username%></p>
+    <hr>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-sm-12 col-md-12 justify-content-left text-left align-left">
+        <div class="card">
+          <div class="card-body ">
+            <h1 class="display-5">Balance: $<%=balance%></h1>
+            <hr>
+            <form class="form-inline" action="/deposit" method="POST">
+              <div class="form-group justify-content-center text-center align-center mb-3">
+                <label for="deposit" class="sr-only">Deposit</label>
+                <input type="number" class="form-control mr-2" name="deposit" step=".01" size="30">
+              </div>
+              <button type="submit" class="btn btn-dark mb-2 btn-lg">Deposit</button>
+            </form>
+
+            <form class="form-inline" action="/withdraw" method="POST">
+              <div class="form-group justify-content-center text-center align-center mb-3">
+                <label for="withdraw" class="sr-only">Withdraw</label>
+                <input type="number" class="form-control mr-2" name="withdraw" step=".01" size="10">
+              </div>
+              <button type="submit" class="btn btn-light mb-2 btn-lg">Withdraw</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-md-12 justify-content-left text-left align-left">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="display-6">Send Money</h5>
+            <form action="/send" method="POST">
+              <div class="form-group">
+                <label for="receiver">Receiver's Email</label>
+                <input type="text" class="form-control" name="receiver">
+              </div>
+              <div class="form-group">
+                <label for="amountToSend">Amount to send</label>
+                <input type="number" class="form-control" name="amountToSend" step=".01" size="10">
+              </div>
+              <button type="submit" class="btn btn-lg btn-dark">Send</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
