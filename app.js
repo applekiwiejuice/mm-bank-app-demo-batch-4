@@ -70,7 +70,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID_G,
       clientSecret: process.env.CLIENT_SECRET_G,
-      callbackURL: "https://mm-bank-app.herokuapp.com/auth/google/user",
+      callbackURL: "http://localhost:3000/auth/google/user",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (accessToken, refreshToken, profile, cb) {
@@ -98,7 +98,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID_FB,
       clientSecret: process.env.CLIENT_SECRET_FB,
-      callbackURL: "https://mm-bank-app.herokuapp.com/auth/facebook/user",
+      callbackURL: "http://localhost:3000/auth/facebook/user",
       enableProof: true,
       profileFields: [
         "id",
